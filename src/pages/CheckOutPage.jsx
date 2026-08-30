@@ -1,32 +1,12 @@
 import React from "react";
 import "./CheckOutPage.css";
 import "./checkout-header.css";
+import Header from "../components/header";
 export default function CheckOutPage() {
   return (
     <>
-        <title>Checkout</title>
-      <div className="checkout-header">
-        <div className="header-content">
-          <div className="checkout-header-left-section">
-            <a href="/">
-              <img className="logo" src="images/logo.png" />
-              <img className="mobile-logo" src="images/mobile-logo.png" />
-            </a>
-          </div>
-
-          <div className="checkout-header-middle-section">
-            Checkout (
-            <a className="return-to-home-link" href="/">
-              3 items
-            </a>
-            )
-          </div>
-
-          <div className="checkout-header-right-section">
-            <img src="images/icons/checkout-lock-icon.png" />
-          </div>
-        </div>
-      </div>
+      <title>Checkout</title>
+      
 
       <div className="checkout-page">
         <div className="page-title">Review your order</div>
@@ -34,7 +14,9 @@ export default function CheckOutPage() {
         <div className="checkout-grid">
           <div className="order-summary">
             <div className="cart-item-container">
-              <div className="delivery-date">Delivery date: Tuesday, June 21</div>
+              <div className="delivery-date">
+                Delivery date: Tuesday, June 21
+              </div>
 
               <div className="cart-item-details-grid">
                 <img
@@ -72,7 +54,9 @@ export default function CheckOutPage() {
                       name="delivery-option-1"
                     />
                     <div>
-                      <div className="delivery-option-date">Tuesday, June 21</div>
+                      <div className="delivery-option-date">
+                        Tuesday, June 21
+                      </div>
                       <div className="delivery-option-price">FREE Shipping</div>
                     </div>
                   </div>
@@ -83,8 +67,12 @@ export default function CheckOutPage() {
                       name="delivery-option-1"
                     />
                     <div>
-                      <div className="delivery-option-date">Wednesday, June 15</div>
-                      <div className="delivery-option-price">$4.99 - Shipping</div>
+                      <div className="delivery-option-date">
+                        Wednesday, June 15
+                      </div>
+                      <div className="delivery-option-price">
+                        $4.99 - Shipping
+                      </div>
                     </div>
                   </div>
                   <div className="delivery-option">
@@ -94,8 +82,12 @@ export default function CheckOutPage() {
                       name="delivery-option-1"
                     />
                     <div>
-                      <div className="delivery-option-date">Monday, June 13</div>
-                      <div className="delivery-option-price">$9.99 - Shipping</div>
+                      <div className="delivery-option-date">
+                        Monday, June 13
+                      </div>
+                      <div className="delivery-option-price">
+                        $9.99 - Shipping
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -103,7 +95,9 @@ export default function CheckOutPage() {
             </div>
 
             <div className="cart-item-container">
-              <div className="delivery-date">Delivery date: Wednesday, June 15</div>
+              <div className="delivery-date">
+                Delivery date: Wednesday, June 15
+              </div>
 
               <div className="cart-item-details-grid">
                 <img
@@ -112,7 +106,9 @@ export default function CheckOutPage() {
                 />
 
                 <div className="cart-item-details">
-                  <div className="product-name">Intermediate Size Basketball</div>
+                  <div className="product-name">
+                    Intermediate Size Basketball
+                  </div>
                   <div className="product-price">$20.95</div>
                   <div className="product-quantity">
                     <span>
@@ -139,7 +135,9 @@ export default function CheckOutPage() {
                       name="delivery-option-2"
                     />
                     <div>
-                      <div className="delivery-option-date">Tuesday, June 21</div>
+                      <div className="delivery-option-date">
+                        Tuesday, June 21
+                      </div>
                       <div className="delivery-option-price">FREE Shipping</div>
                     </div>
                   </div>
@@ -151,8 +149,12 @@ export default function CheckOutPage() {
                       name="delivery-option-2"
                     />
                     <div>
-                      <div className="delivery-option-date">Wednesday, June 15</div>
-                      <div className="delivery-option-price">$4.99 - Shipping</div>
+                      <div className="delivery-option-date">
+                        Wednesday, June 15
+                      </div>
+                      <div className="delivery-option-price">
+                        $4.99 - Shipping
+                      </div>
                     </div>
                   </div>
                   <div className="delivery-option">
@@ -162,8 +164,12 @@ export default function CheckOutPage() {
                       name="delivery-option-2"
                     />
                     <div>
-                      <div className="delivery-option-date">Monday, June 13</div>
-                      <div className="delivery-option-price">$9.99 - Shipping</div>
+                      <div className="delivery-option-date">
+                        Monday, June 13
+                      </div>
+                      <div className="delivery-option-price">
+                        $9.99 - Shipping
+                      </div>
                     </div>
                   </div>
                 </div>
