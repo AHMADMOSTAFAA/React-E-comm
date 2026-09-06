@@ -1,29 +1,8 @@
-import React from "react";
-import axios from "axios";
-import { useEffect, useState } from "react";
-import "./HomePage.css";
-import Header from "../components/header";
-import { formatPrice } from "../utils/money";
+import { formatPrice } from '../../utils/money';
 
-export function HomePage({ cart }) {
-  const [products, setProducts] = useState([]);
- 
-  useEffect(() => {
-     axios.get("/api/products")
-      .then((response) => {
-        setProducts(response.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching products:", error);
-      });
-  }, []);
-  return (
-    <>
-      <title>Ecommerce project</title>
-
-
-      <div className="home-page">
-        <div className="products-grid">
+export function ProductsGrid({ products }) {
+    return (
+ <div className="products-grid">
           {products.map((product) => {
             return (
               <div key={product.id} className="product-container">
@@ -83,7 +62,5 @@ export function HomePage({ cart }) {
             );
           })}
         </div>
-      </div>
-    </>
-  );
+    );
 }
