@@ -1,6 +1,11 @@
 import { formatPrice } from "../../utils/money";
 import { DeliveryOptions } from "./DeliveryOptions";
-export function OrderSummary({ cart, deliveryOptions }) {
+import axios from "axios";
+export function OrderSummary({ cart, deliveryOptions ,loadCart }) {
+  const DeleteItem = async (productId) => {
+    await axios.delete(`/api/cart-items/${productId}`);
+    await loadCart();
+  };
     return (
         <div className="order-summary">
             {deliveryOptions.length > 0 &&
@@ -47,13 +52,13 @@ export function OrderSummary({ cart, deliveryOptions }) {
                           <span className="update-quantity-link link-primary">
                             Update
                           </span>
-                          <span className="delete-quantity-link link-primary">
+                          <span className="delete-quantity-link link-primary" onClick={()=>DeleteItem(item.productId)}>
                             Delete
                           </span>
                         </div>
                       </div>
 
-                     <DeliveryOptions deliveryOptions={deliveryOptions} cartItem={item} />
+                     <DeliveryOptions deliveryOptions={deliveryOptions} cartItem={item} loadCart={loadCart} />
                     </div>
                   </div>
                 );

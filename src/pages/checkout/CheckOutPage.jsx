@@ -8,7 +8,7 @@ import { formatPrice } from "../../utils/money";
 import { PaymentSummary } from "./PaymentSummary";
 import { OrderSummary } from "./OrderSummary";
 
-export default function CheckOutPage({ cart }) {
+export default function CheckOutPage({ cart , loadCart}) {
   const [deliveryOptions, setDeliveryOptions] = useState([]);
   const [paymentSummary, setPaymentSummary] = useState(null);
   useEffect(() => {
@@ -30,7 +30,7 @@ export default function CheckOutPage({ cart }) {
   
   }
    fetchData();
-}, []);
+}, [cart]);
 
   return (
     <>
@@ -40,8 +40,8 @@ export default function CheckOutPage({ cart }) {
         <div className="page-title">Review your order</div>
 
         <div className="checkout-grid">
-          <OrderSummary cart={cart} deliveryOptions={deliveryOptions} />
-          <PaymentSummary paymentSummary={paymentSummary} />
+          <OrderSummary cart={cart} deliveryOptions={deliveryOptions} loadCart={loadCart} />
+          <PaymentSummary paymentSummary={paymentSummary} loadCart={loadCart} />
         </div>
       </div>
     </>
